@@ -1,7 +1,7 @@
 import React from 'react';
 
 function CertificateList({ certificates, userId }) {
-  const baseUrl = 'https://your-project-url.supabase.co/storage/v1/object/public/certificates';
+  const baseUrl = '';
 
   return (
     <div className="certificates-section">
