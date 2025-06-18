@@ -1,0 +1,360 @@
+/* ====== Global Styling ====== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #496a8c;
+  }
+  
+  .dashboard-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* ====== Heading ====== */
+  .dashboard-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ====== Logout Button ====== */
+  .logout-btn {
+    background-color: #ff0303;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff0f1b;
+  }
+  
+  /* ====== Grid Layout ====== */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ====== Bento Box Style ====== */
+  .bento-box {
+    background-color: rgb(12, 12, 12);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .bento-box:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* ====== Upload Box ====== */
+  .upload-box h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .upload-btn {
+    display: inline-block;
+    background-color: #491aae;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-btn:hover {
+    background-color: #1c5980;
+  }
+  
+  .upload-note {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  /* ====== Certificate List ====== */
+  .cert-list-box h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cert-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cert-name {
+    word-break: break-all;
+    flex: 1;
+    font-size: 0.95rem;
+  }
+  
+  .download-link {
+    text-decoration: none;
+    color: #6435f2;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  
+  .download-link:hover {
+    text-decoration: underline;
+  }
+  .dotgrades-loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .dotgrades-loader span {
+    width: 10px;
+    height: 10px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: pulse 0.9s infinite ease-in-out;
+  }
+  
+  .dotgrades-loader span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dotgrades-loader span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes pulse {
+    0%, 80%, 100% {
+      transform: scale(0.8);
+      opacity: 0.6;
+    }
+    40% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  .cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cert-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  text-align: center;
+}
+
+.cert-preview {
+  width: 100%;
+  max-width: 300px;
+  height: 200px; /* Fixed height for preview */
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.cert-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  word-break: break-word;
+}
+
+.download-link {
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+.upload-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.certificates-section {
+  margin-top: 2rem;
+}
+
+.cert-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.cert-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.cert-preview {
+  width: 100%;
+  max-width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.dashboard-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-scroll {
+  max-height: 65vh; /* adjust as needed */
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+.dashboard-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #121212;
+  padding: 1.5rem;
+  color: #ffffff;
+}
+
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cert-section-title {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.certificate-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.certificate-item {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-name {
+  color: #ffffff;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.download-link {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Dashboard.css */
+
+.dashboard-container {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bento-box {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Certificate list scrolls if long */
+.cert-list-box {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.cert-name {
+  color: #fff;
+  word-break: break-all;
+}
+
+.download-link {
+  color: #0af;
+  text-decoration: none;
+}
+
